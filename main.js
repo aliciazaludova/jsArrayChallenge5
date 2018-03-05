@@ -29,6 +29,12 @@ result1 = array1.filter(function (curElem) {
 
 console.log(result1);
 
+function printToDom(result, divId) {
+	var getId = document.getElementById(divId);
+	getId.innerHTML += result;
+}
+printToDom(result1, 'example1');
+
 
 var array1 = [1, 2, 4, 7, 5, 9];
 var array2 = [5, 9, 2];
@@ -43,8 +49,10 @@ console.log(result2);
 
 function printToDom(result, divId) {
 		// take string and innerHTML to the divID
-		var getId = document.getElementById('example2');
-		getId.innerHTML += result2;
+		var getId = document.getElementById(divId);
+		getId.innerHTML += result;
 }
+
+printToDom(result2, 'example2');
 
 
